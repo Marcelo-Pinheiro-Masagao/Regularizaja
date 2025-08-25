@@ -8,7 +8,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <h1 className="text-xl font-bold text-primary">
-              Equipe Especializada - Regularização de Imóveis
+              Equipe Especializada - Regularização de imóveis e Regularização de Estatutos de Associações, Organizações Sociais e Religiosas e contratos de Sociedade Ltda e Simples
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-8">

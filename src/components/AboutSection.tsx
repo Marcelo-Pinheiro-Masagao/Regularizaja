@@ -25,7 +25,7 @@ export const AboutSection = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Com <strong>mais de 28 anos de experiência</strong>, nossa equipe se especializou na solução 
-                dos problemas mais complexos do mercado imobiliário brasileiro. Combinamos expertise 
+                dos casos complexos do mercado imobiliário brasileiro. Combinamos expertise 
                 jurídica com conhecimento prático do mercado para oferecer soluções eficazes e seguras.
               </p>
             </div>
