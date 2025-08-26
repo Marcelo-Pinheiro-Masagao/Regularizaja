@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -24,9 +23,8 @@ export const Header = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
               Contato
             </a>
-            <Button variant="whatsapp" size="sm">
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
+            <Button asChild variant="default" size="sm">
+              <a href="#contact">Fale Conosco</a>
             </Button>
           </nav>
         </div>

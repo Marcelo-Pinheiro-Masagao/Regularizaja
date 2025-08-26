@@ -88,7 +88,7 @@ export const BenefitsSection = () => {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start">
                       <FileCheck className="h-5 w-5 text-success mr-3 mt-0.5 flex-shrink-0" />
-                      <span><strong>Aumento do valor de mercado:</strong> Imóveis regularizados podem valer até 40% mais</span>
+                      <span><strong>Aumento do valor de mercado:</strong> Imóveis regularizados podem valer até 25% mais</span>
                     </li>
                     <li className="flex items-start">
                       <FileCheck className="h-5 w-5 text-success mr-3 mt-0.5 flex-shrink-0" />

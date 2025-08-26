@@ -1,9 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, MapPin, Clock, Send } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { toast } from "@/hooks/use-toast";
 import femaleLayerImage from "@/assets/female-lawyer-office.jpg";
 
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
+  email: z.string().email("Email inválido"),
+  phone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
+  message: z.string().min(10, "Por favor, descreva seu caso com mais detalhes"),
+});
+
 export const ContactSection = () => {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = (data: any) => {
+    console.log("Formulário enviado:", data);
+    toast({
+      title: "Mensagem enviada!",
+      description: "Entraremos em contato em breve.",
+    });
+    reset();
+  };
+
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
@@ -22,20 +49,73 @@ export const ContactSection = () => {
               <Card className="border-border/50 card-shadow">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
-                    <div className="bg-success/10 p-3 rounded-lg">
-                      <MessageCircle className="h-6 w-6 text-success" />
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Send className="h-6 w-6 text-primary" />
                     </div>
-                    <span className="text-foreground">WhatsApp</span>
+                    <span className="text-foreground">Formulário de Contato</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Fale diretamente conosco via WhatsApp para um atendimento rápido e personalizado.
-                  </p>
-                  <Button variant="whatsapp" size="lg" className="w-full sm:w-auto">
-                    <MessageCircle className="h-5 w-5" />
-                    Chamar no WhatsApp
-                  </Button>
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                    <div>
+                      <Label htmlFor="name">Nome completo</Label>
+                      <Input
+                        id="name"
+                        {...register("name")}
+                        placeholder="Seu nome completo"
+                        className={errors.name ? "border-destructive" : ""}
+                      />
+                      {errors.name && (
+                        <p className="text-sm text-destructive mt-1">{errors.name.message as string}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="email">E-mail</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        {...register("email")}
+                        placeholder="seu@email.com"
+                        className={errors.email ? "border-destructive" : ""}
+                      />
+                      {errors.email && (
+                        <p className="text-sm text-destructive mt-1">{errors.email.message as string}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="phone">Telefone</Label>
+                      <Input
+                        id="phone"
+                        {...register("phone")}
+                        placeholder="(11) 99999-9999"
+                        className={errors.phone ? "border-destructive" : ""}
+                      />
+                      {errors.phone && (
+                        <p className="text-sm text-destructive mt-1">{errors.phone.message as string}</p>
+                      )}
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="message">Histórico do caso</Label>
+                      <Textarea
+                        id="message"
+                        {...register("message")}
+                        placeholder="Descreva detalhadamente seu caso, incluindo documentos disponíveis e situação atual..."
+                        className={errors.message ? "border-destructive" : ""}
+                        rows={4}
+                      />
+                      {errors.message && (
+                        <p className="text-sm text-destructive mt-1">{errors.message.message as string}</p>
+                      )}
+                    </div>
+                    
+                    <Button type="submit" size="lg" className="w-full">
+                      <Send className="h-5 w-5 mr-2" />
+                      Enviar Mensagem
+                    </Button>
+                  </form>
                 </CardContent>
               </Card>
 
