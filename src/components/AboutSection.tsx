@@ -21,7 +21,7 @@ export const AboutSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                Sobre Nosso Escritório
+                Sobre Nossa Equipe
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Com <strong>mais de 28 anos de experiência</strong>, nossa equipe se especializou na solução 
@@ -60,7 +60,7 @@ export const AboutSection = () => {
                         Soluções Comprovadas
                       </h3>
                       <p className="text-muted-foreground">
-                        Casos resolvidos com sucesso em regularização de imóveis
+                        Casos resolvidos em regularização de imóveis e regularização de estatutos de Organizações, Associações e contratos de sociedades ltda e sociedade simples
                       </p>
                     </div>
                   </div>

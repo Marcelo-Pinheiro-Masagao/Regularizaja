@@ -7,7 +7,7 @@ export const ServicesSection = () => {
   const services = [
     {
       title: "Regularização de Imóveis",
-      description: "Correção de matrículas, unificação de lotes, e adequação de documentação para venda ou financiamento.",
+      description: "Análise e regularização de matrículas, regularização de 'contratos de gaveta' regularização de compromissos de compra e venda.",
       image: realEstateImage,
       alt: "Regularização de Imóveis"
     },
