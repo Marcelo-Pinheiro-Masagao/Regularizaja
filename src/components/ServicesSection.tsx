@@ -40,6 +40,42 @@ export const ServicesSection = () => {
       description: "Análise completa de documentação para compra e venda de imóveis.",
       image: null,
       alt: "Due Diligence Imobiliária"
+    },
+    {
+      title: "Inventário e Adjudicação",
+      description: "Inventário extrajudicial e judicial, adjudicação extrajudicial e judicial para regularização de patrimônio.",
+      image: null,
+      alt: "Inventário e Adjudicação"
+    },
+    {
+      title: "Usucapião",
+      description: "Usucapião extrajudicial e judicial para regularização de propriedade por posse prolongada.",
+      image: null,
+      alt: "Usucapião"
+    },
+    {
+      title: "Regularização de Mandatos",
+      description: "Regularização de mandato de diretoria vencido e ou irregular em associações e organizações.",
+      image: null,
+      alt: "Regularização de Mandatos"
+    },
+    {
+      title: "Documentos Eletrônicos",
+      description: "Análise e regularização de documentos eletrônicos para adequação às normas vigentes.",
+      image: null,
+      alt: "Documentos Eletrônicos"
+    },
+    {
+      title: "Assessoria em Assembleias",
+      description: "Assessoria e consultoria para assembleias de associações e organizações, garantindo conformidade legal.",
+      image: null,
+      alt: "Assessoria em Assembleias"
+    },
+    {
+      title: "Certidões INSS",
+      description: "Assessoria em obtenção de certidões de débitos e de obras do INSS para regularização previdenciária.",
+      image: null,
+      alt: "Certidões INSS"
     }
   ];
 
