@@ -13,7 +13,7 @@ export const ServicesSection = () => {
     },
     {
       title: "Questões Cartoriais",
-      description: "Resolução de problemas em cartórios de registro de imóveis, incluindo retificações e averbações. Registro de pessoas jurídicas e análise de notas devolutivas, suscitação de dúvidas.",
+      description: "Resolução de problemas em cartórios de registro de imóveis, incluindo retificações e averbações. Registro de pessoas jurídicas e análise de notas devolutivas, suscitação de dúvidas e pedidos de providencias.",
       image: notaryImage,
       alt: "Questões Cartoriais"
     },
