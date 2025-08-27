@@ -21,7 +21,6 @@ const buttonVariants = cva(
         hero: "hero-gradient text-primary-foreground hover:scale-105 elegant-shadow border-0 font-semibold",
         professional: "bg-primary text-primary-foreground hover:bg-primary-dark transition-elegant professional-shadow",
         accent: "bg-accent text-accent-foreground hover:bg-accent/90 font-semibold",
-        whatsapp: "bg-success text-success-foreground hover:bg-success/90 font-semibold transition-elegant",
       },
       size: {
         default: "h-11 px-6 py-3",
