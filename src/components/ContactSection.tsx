@@ -101,10 +101,10 @@ export const ContactSection = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Entre em contato por e-mail para consultas mais detalhadas.
-                  </p>
-                  <a href="mailto:marceloapinheiro2016@gmail.com" className="text-primary hover:underline font-medium">marceloapinheiro2016@gmail.com</a>
+                  <p className="text-muted-foreground mb-4">Entre em contato por e-mail ou WhatsApp para consultas mais detalhadas.</p>
+                  <a href="mailto:marceloapinheiro2016@gmail.com" className="text-primary hover:underline font-medium">marceloapinheiro2016@gmail.com
+(11)995811106
+                </a>
                 </CardContent>
               </Card>
 
