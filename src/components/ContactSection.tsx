@@ -133,10 +133,10 @@ export const ContactSection = () => {
                     Entre em contato por e-mail para consultas mais detalhadas.
                   </p>
                   <a 
-                    href="mailto:marcelopinheiro2016@gmail.com"
+                    href="mailto:marceloapinheiro2016@gmail.com"
                     className="text-primary hover:underline font-medium"
                   >
-                    marcelopinheiro2016@gmail.com
+                    marceloapinheiro2016@gmail.com
                   </a>
                 </CardContent>
               </Card>
