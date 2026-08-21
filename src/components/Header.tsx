@@ -20,6 +20,9 @@ export const Header = () => {
             <a href="#services" className="text-foreground hover:text-primary transition-smooth">
               Serviços
             </a>
+            <a href="#videos" className="text-foreground hover:text-primary transition-smooth">
+              Vídeos
+            </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
               Contato
             </a>
