@@ -105,10 +105,11 @@ export const ContactSection = () => {
                       {errors.message && <p className="text-sm text-destructive mt-1">{errors.message.message as string}</p>}
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full">
+                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                       <Send className="h-5 w-5 mr-2" />
-                      Enviar Mensagem
+                      {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                     </Button>
+
                   </form>
                 </CardContent>
               </Card>
