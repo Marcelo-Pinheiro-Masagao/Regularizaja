@@ -8,14 +8,17 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
 import femaleLayerImage from "@/assets/female-lawyer-office.jpg";
 const contactFormSchema = z.object({
-  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
-  email: z.string().email("Email inválido"),
-  phone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos"),
-  message: z.string().min(10, "Por favor, descreva seu caso com mais detalhes")
+  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres").max(200),
+  email: z.string().email("Email inválido").max(320),
+  phone: z.string().min(10, "Telefone deve ter pelo menos 10 dígitos").max(40),
+  message: z.string().min(10, "Por favor, descreva seu caso com mais detalhes").max(5000)
 });
 export const ContactSection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
     handleSubmit,
@@ -26,14 +29,33 @@ export const ContactSection = () => {
   } = useForm({
     resolver: zodResolver(contactFormSchema)
   });
-  const onSubmit = (data: any) => {
-    console.log("Formulário enviado:", data);
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve."
-    });
-    reset();
+  const onSubmit = async (data: any) => {
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.from("contact_submissions").insert({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.message
+      });
+      if (error) throw error;
+      toast({
+        title: "Mensagem enviada!",
+        description: "Recebemos seu caso e entraremos em contato em breve."
+      });
+      reset();
+    } catch (err) {
+      console.error("Erro ao enviar formulário:", err);
+      toast({
+        title: "Erro ao enviar",
+        description: "Não foi possível enviar sua mensagem. Tente novamente ou escreva para marceloapinheiro2016@gmail.com.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
