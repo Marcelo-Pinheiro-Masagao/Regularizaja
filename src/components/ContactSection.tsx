@@ -39,6 +39,16 @@ export const ContactSection = () => {
         message: data.message
       });
       if (error) throw error;
+
+      const { error: mailError } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message
+        }
+      });
+      if (mailError) console.error("Erro ao enviar e-mail de notificação:", mailError);
       toast({
         title: "Mensagem enviada!",
         description: "Recebemos seu caso e entraremos em contato em breve."
