@@ -1,24 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Users, CheckCircle, Clock } from "lucide-react";
-import teamImage from "@/assets/legal-team-meeting.jpg";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl card-shadow">
-              <img
-                src={teamImage}
-                alt="Equipe jurídica especializada em reunião"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                 Sobre Nossa Equipe
