@@ -21,6 +21,7 @@ const Index = () => {
             <AboutSection />
             <BenefitsSection />
             <VideosSection />
+            <InstagramSection />
             <ContactSection />
           </main>
         </div>
