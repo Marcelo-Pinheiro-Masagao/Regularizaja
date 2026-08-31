@@ -26,7 +26,17 @@ const videos = [
       "Posso ter um desconto no registro definitivo?",
     ],
   },
-  { title: "Compromisso de Compra e Venda", src: video4.url },
+  {
+    title: "Vedendor desaparece ou recusa-se a passar escritura",
+    src: video4.url,
+    detailDescription:
+      "Documentos particulares que podem ser registrados sem escritura!",
+    answeredQuestions: [
+      "Quando o vendedor desaparece?",
+      "Quando o vendedor recusa-se a passar a escritura definitiva?",
+      "Adjudicação Compulsória?",
+    ],
+  },
 ];
 
 export const VideosSection = () => {
