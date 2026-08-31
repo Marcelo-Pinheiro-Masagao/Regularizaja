@@ -11,6 +11,10 @@ export const InstagramSection = () => {
           href="https://www.instagram.com/adv.marcelomasagao/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.instagram.com/adv.marcelomasagao/", "_blank", "noopener,noreferrer");
+          }}
           className="inline-flex items-center gap-2 text-foreground hover:text-accent transition-colors font-medium"
         >
           <Instagram className="h-5 w-5" />
