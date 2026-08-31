@@ -10,7 +10,7 @@ import * as z from "zod";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
-import femaleLayerImage from "@/assets/female-lawyer-office.jpg";
+
 const contactFormSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres").max(200),
   email: z.string().email("Email inválido").max(320),
