@@ -15,7 +15,17 @@ const videos = [
       "Reconhecimento de firma eletrônico pode ser utilizado nos atos ou reconhecimento de firma físico?",
     ],
   },
-  { title: "Registro de Imóveis", src: video3.url },
+  {
+    title: "Compromisso de compra e venda. Arrependimento?",
+    src: video3.url,
+    answeredQuestions: [
+      "Posso registrar um compromisso de compra e venda?",
+      "Quando vale a pena?",
+      "Houve algum investimento?",
+      "Será que haverá desistência?",
+      "Posso ter um desconto no registro definitivo?",
+    ],
+  },
   { title: "Compromisso de Compra e Venda", src: video4.url },
 ];
 
