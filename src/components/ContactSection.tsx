@@ -77,7 +77,7 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="grid gap-6">
               <Card className="border-border/50 card-shadow">
@@ -162,12 +162,6 @@ export const ContactSection = () => {
                   </CardContent>
                 </Card>
               </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl elegant-shadow">
-              <img src={femaleLayerImage} alt="Advogada profissional em escritório moderno" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
