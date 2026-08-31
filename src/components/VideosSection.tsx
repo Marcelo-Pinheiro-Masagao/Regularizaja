@@ -5,7 +5,11 @@ import video3 from "@/assets/Regularização_de_imóveis_registro_1.mp4.asset.js
 import video4 from "@/assets/Compromisso_de_compra_e_venda_1_1.mp4.asset.json";
 
 const videos = [
-  { title: "Apresentação", src: video1.url },
+  {
+    title: "Apresentação Adv Marcelo masagão e os cuidados na compra e venda do ímóvel",
+    src: video1.url,
+    detailDescription: "Caminhos da regularização de imóveis",
+  },
   {
     title: "Importância do reconhecimento de firma",
     src: video2.url,
