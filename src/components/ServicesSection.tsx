@@ -1,81 +1,87 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import realEstateImage from "@/assets/real-estate-consultation.jpg";
-import notaryImage from "@/assets/notary-services.jpg";
-import auctionImage from "@/assets/auction-legal.jpg";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Building,
+  Scale,
+  Gavel,
+  Briefcase,
+  Building2,
+  Search,
+  Users,
+  Home,
+  FileSignature,
+  Monitor,
+  UsersRound,
+  ShieldCheck,
+  type LucideIcon
+} from "lucide-react";
+
+interface Service {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
 
 export const ServicesSection = () => {
-  const services = [
+  const services: Service[] = [
     {
       title: "Regularização de Imóveis",
       description: "Análise e regularização de matrículas, regularização de 'contratos de gaveta' regularização de compromissos de compra e venda.",
-      image: realEstateImage,
-      alt: "Regularização de Imóveis"
+      icon: Building
     },
     {
       title: "Questões Cartoriais",
       description: "Resolução de problemas em cartórios de registro de imóveis, incluindo retificações e averbações. Registro de pessoas jurídicas e análise de notas devolutivas, suscitação de dúvidas e pedidos de providencias.",
-      image: notaryImage,
-      alt: "Questões Cartoriais"
+      icon: Scale
     },
     {
       title: "Leilões Judiciais e Extrajudiciais",
       description: "Análise prévia, acompanhamento de arrematação e resolução de vícios ocultos em imóveis leiloados judicialmente e extrajudicialmente.",
-      image: auctionImage,
-      alt: "Leilões Judiciais e Extrajudiciais"
+      icon: Gavel
     },
     {
       title: "Atos Societários",
       description: "Constituição, alteração e dissolução de empresas, com foco em holdings familiares e imobiliárias. Análise de estatutos de associações, organizações religiosas, organizações sociais, fundações para registro em cartório.",
-      image: null,
-      alt: "Atos Societários"
+      icon: Briefcase
     },
     {
       title: "Consultoria Empresarial",
       description: "Assessoria jurídica completa para empresas do setor imobiliário e construtoras.",
-      image: null,
-      alt: "Consultoria Empresarial"
+      icon: Building2
     },
     {
       title: "Due Diligence Imobiliária",
       description: "Análise completa de documentação para compra e venda de imóveis.",
-      image: null,
-      alt: "Due Diligence Imobiliária"
+      icon: Search
     },
     {
       title: "Inventário e Adjudicação",
       description: "Inventário extrajudicial e judicial, adjudicação extrajudicial e judicial para regularização de patrimônio.",
-      image: null,
-      alt: "Inventário e Adjudicação"
+      icon: Users
     },
     {
       title: "Usucapião",
       description: "Usucapião extrajudicial e judicial para regularização de propriedade por posse prolongada.",
-      image: null,
-      alt: "Usucapião"
+      icon: Home
     },
     {
       title: "Regularização de Mandatos",
       description: "Regularização de mandato de diretoria vencido e ou irregular em associações e organizações.",
-      image: null,
-      alt: "Regularização de Mandatos"
+      icon: FileSignature
     },
     {
       title: "Documentos Eletrônicos",
       description: "Análise e regularização de documentos eletrônicos para adequação às normas vigentes.",
-      image: null,
-      alt: "Documentos Eletrônicos"
+      icon: Monitor
     },
     {
       title: "Assessoria em Assembleias",
       description: "Assessoria e consultoria para assembleias de associações e organizações, garantindo conformidade legal.",
-      image: null,
-      alt: "Assessoria em Assembleias"
+      icon: UsersRound
     },
     {
       title: "Certidões INSS",
       description: "Assessoria em obtenção de certidões de débitos e de obras do INSS para regularização previdenciária.",
-      image: null,
-      alt: "Certidões INSS"
+      icon: ShieldCheck
     }
   ];
 
@@ -91,30 +97,34 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="card-shadow hover:scale-[1.02] transition-elegant border-border/50">
-              {service.image && (
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-full h-48 object-cover"
-                  />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <Card
+                key={index}
+                className="card-shadow hover:-translate-y-1 transition-elegant border-border/50 bg-card p-6"
+              >
+                <div className="flex flex-col h-full">
+                  <div className="mb-5">
+                    <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
+                      <Icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <CardHeader className="p-0 mb-3">
+                    <CardTitle className="text-lg font-semibold text-foreground leading-snug">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0 flex-grow">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardContent>
                 </div>
-              )}
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
