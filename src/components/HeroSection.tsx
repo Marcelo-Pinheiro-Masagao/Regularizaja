@@ -38,12 +38,16 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="accent" size="lg" className="min-w-[200px]">
-                <MessageCircle className="h-5 w-5" />
-                Fale Conosco
+              <Button variant="accent" size="lg" className="min-w-[200px]" asChild>
+                <a href="#contact">
+                  <MessageCircle className="h-5 w-5" />
+                  Fale Conosco
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="min-w-[200px] bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20">
-                Conheça Nossos Serviços
+              <Button variant="outline" size="lg" className="min-w-[200px] bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
+                <a href="#services">
+                  Conheça Nossos Serviços
+                </a>
               </Button>
             </div>
           </div>
