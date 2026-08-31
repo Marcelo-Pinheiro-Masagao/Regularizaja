@@ -31,7 +31,7 @@ export const HeroSection = () => {
             </Badge>
             <Badge variant="secondary" className="bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 px-4 py-2">
               <Home className="h-4 w-4 mr-2" />
-              especialistas em imóveis e em contratos de sociedade e estatuto de Organizações
+              Especialistas em imóveis e em contratos de sociedade e estatuto de organizações
             </Badge>
           </div>
 
