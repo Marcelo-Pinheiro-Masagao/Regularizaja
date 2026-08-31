@@ -54,22 +54,26 @@ export const VideosSection = () => {
                 />
                 <h3 className="text-lg font-semibold text-foreground">{video.title}</h3>
 
-                {"detailDescription" in video && video.detailDescription && (
-                  <>
-                    <p className="text-sm text-muted-foreground">
-                      {video.detailDescription}
-                    </p>
-                    <div>
-                      <h4 className="text-sm font-semibold text-foreground mb-1">
-                        Perguntas respondidas
-                      </h4>
-                      <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                        {video.answeredQuestions?.map((question) => (
-                          <li key={question}>{question}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </>
+                {(video.detailDescription || video.answeredQuestions?.length) && (
+                  <div className="space-y-3">
+                    {video.detailDescription && (
+                      <p className="text-sm text-muted-foreground">
+                        {video.detailDescription}
+                      </p>
+                    )}
+                    {video.answeredQuestions?.length && (
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground mb-1">
+                          Perguntas respondidas
+                        </h4>
+                        <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                          {video.answeredQuestions.map((question) => (
+                            <li key={question}>{question}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 )}
               </CardContent>
             </Card>
