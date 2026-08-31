@@ -15,8 +15,8 @@ export const VideosSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {videos.map((video) => (
-            <Card key={video.title} className="card-shadow border-border/50 overflow-hidden">
+          {videos.map((video, index) => (
+            <Card key={video.title} id={`video-${index}`} className="card-shadow border-border/50 overflow-hidden">
               <CardContent className="p-4 space-y-3">
                 <video
                   src={video.src}

@@ -10,7 +10,7 @@ import { VideoSidebar } from "@/components/VideoSidebar";
 
 const Index = () => {
   return (
-    <SidebarProvider defaultOpen={false}>
+    <SidebarProvider defaultOpen>
       <div className="min-h-screen flex w-full">
         <div className="flex-1">
           <Header />

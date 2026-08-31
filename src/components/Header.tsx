@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export const Header = () => {
   return (
@@ -12,7 +11,6 @@ export const Header = () => {
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <SidebarTrigger className="text-foreground hover:text-primary hover:bg-transparent" />
             <a href="#home" className="text-foreground hover:text-primary transition-smooth">
               Início
             </a>
