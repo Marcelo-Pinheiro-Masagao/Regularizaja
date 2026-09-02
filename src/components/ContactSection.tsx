@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Clock, Send } from "lucide-react";
+import { Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -134,10 +134,23 @@ export const ContactSection = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">Entre em contato por e-mail ou WhatsApp para consultas mais detalhadas.</p>
-                  <a href="mailto:marceloapinheiro2016@gmail.com" className="text-primary hover:underline font-medium">marceloapinheiro2016@gmail.com
-(11)995811106
-                </a>
+                  <p className="text-muted-foreground mb-4">Entre em contato por e-mail para consultas mais detalhadas.</p>
+                  <a href="mailto:marceloapinheiro2016@gmail.com" className="text-primary hover:underline font-medium">marceloapinheiro2016@gmail.com</a>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border/50 card-shadow">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-3">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <MessageCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <span className="text-foreground">WhatsApp</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">Fale diretamente conosco pelo WhatsApp.</p>
+                  <a href="https://wa.me/5511995811106" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">(11) 99581-1106</a>
                 </CardContent>
               </Card>
 
