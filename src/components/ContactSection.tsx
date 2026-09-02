@@ -50,6 +50,7 @@ export const ContactSection = () => {
         }
       });
       if (mailError) console.error("Erro ao enviar e-mail de notificação:", mailError);
+      trackContactConversion();
       toast({
         title: "Mensagem enviada!",
         description: "Recebemos seu caso e entraremos em contato em breve."

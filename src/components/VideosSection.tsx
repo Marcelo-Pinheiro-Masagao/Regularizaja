@@ -24,6 +24,7 @@ export const VideosSection = () => {
                   controls
                   preload="metadata"
                   className="w-full rounded-lg bg-muted"
+                  onPlay={() => trackVideoView(video.title)}
                 />
                 <h3 className="text-lg font-semibold text-foreground">{video.title}</h3>
 
