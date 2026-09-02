@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { trackContactConversion } from "@/lib/gtag";
 import { useState } from "react";
 
 const contactFormSchema = z.object({

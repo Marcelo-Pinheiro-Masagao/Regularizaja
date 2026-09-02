@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { videos } from "@/data/videos";
+import { trackVideoView } from "@/lib/gtag";
 
 export const VideosSection = () => {
   return (
