@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { trackContactConversion } from "@/lib/gtag";
 import { useState } from "react";
 
 const contactFormSchema = z.object({
@@ -49,6 +50,7 @@ export const ContactSection = () => {
         }
       });
       if (mailError) console.error("Erro ao enviar e-mail de notificação:", mailError);
+      trackContactConversion();
       toast({
         title: "Mensagem enviada!",
         description: "Recebemos seu caso e entraremos em contato em breve."

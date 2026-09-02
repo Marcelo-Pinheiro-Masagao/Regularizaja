@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { videos } from "@/data/videos";
+import { trackVideoView } from "@/lib/gtag";
 
 export const VideosSection = () => {
   return (
@@ -23,6 +24,7 @@ export const VideosSection = () => {
                   controls
                   preload="metadata"
                   className="w-full rounded-lg bg-muted"
+                  onPlay={() => trackVideoView(video.title)}
                 />
                 <h3 className="text-lg font-semibold text-foreground">{video.title}</h3>
 
