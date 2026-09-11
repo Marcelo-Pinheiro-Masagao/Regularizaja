@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Award, Home, MessageCircle } from "lucide-react";
+import { Shield, Award, Home, MessageCircle, Instagram } from "lucide-react";
 
 export const HeroSection = () => {
   return (
