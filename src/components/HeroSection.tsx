@@ -18,7 +18,7 @@ export const HeroSection = () => {
               Primeiro precisamos descobrir exatamente por quê.
             </p>
             <p className="text-lg lg:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto">
-              Problemas que posso ajudar a solucionar: imóvel sem matrícula, transcrição antiga, imóvel sem escritura, contrato de gaveta, proprietário que consta no registro já faleceu, imóvel recebido por herança, construção não averbada, divergência de área, necessidade de retificação, usucapião, adjudicação compulsória, exigência do Registro de Imóveis, problemas na cadeia dominial, necessidade de averbações, desmembramento/unificação, assessoria em doação, reserva de usufruto, testamento e locação.
+              Problemas que posso ajudar a solucionar: imóvel sem matrícula, transcrição antiga, imóvel sem escritura, contrato de gaveta, proprietário que consta no registro já faleceu, imóvel recebido por herança, construção não averbada, divergência de área, necessidade de retificação, usucapião, adjudicação compulsória, exigência do Registro de Imóveis, problemas na cadeia dominial, necessidade de averbações, desmembramento/unificação, doações, usufrutos, testamentos e locações.
             </p>
           </div>
 
