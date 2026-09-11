@@ -26,8 +26,8 @@ export const AboutSection = () => {
                 Sobre Nossa Equipe
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Com <strong>mais de 28 anos de experiência em cartório</strong>, nossa equipe se especializou na solução 
-                dos casos complexos do mercado imobiliário e mercado societário e associativo brasileiro. Combinamos expertise
+                Advogado e ex-cartorário, Marcelo Masagão possui <strong>mais de 28 anos de experiência em cartórios</strong>, se especializou na solução 
+                dos casos complexos do mercado imobiliário e mercado societário e associativo brasileiro. Combinando expertise
                 jurídica com conhecimento prático do mercado para oferecer soluções eficazes e seguras.
               </p>
             </div>

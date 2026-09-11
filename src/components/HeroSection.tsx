@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Award, Home, MessageCircle, Instagram } from "lucide-react";
+import { Shield, Award, Home, MessageCircle, Instagram, Scale, Clock, Briefcase } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -49,12 +49,44 @@ export const HeroSection = () => {
                 Conheça Nossos Serviços
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="min-w-[260px] bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
-              <a href="https://www.instagram.com/adv.marcelomasagao/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="h-5 w-5" />
+            <Button variant="outline" size="lg" className="min-w-[260px] h-auto py-3 bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 whitespace-normal text-center leading-tight" asChild>
+              <a href="https://www.instagram.com/adv.marcelomasagao/">
+                <Instagram className="h-5 w-5 shrink-0" />
                 Veja mais vídeos sobre cartórios, imóveis e inventários
               </a>
             </Button>
+          </div>
+
+          <div className="pt-8 border-t border-primary-foreground/20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="flex flex-col items-center text-center space-y-2">
+                <div className="bg-primary-foreground/10 p-3 rounded-full">
+                  <Clock className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-accent">28+</p>
+                  <p className="text-sm text-primary-foreground/80">anos de experiência</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center text-center space-y-2">
+                <div className="bg-primary-foreground/10 p-3 rounded-full">
+                  <Scale className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-accent">Advogado</p>
+                  <p className="text-sm text-primary-foreground/80">atuante na área registral</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center text-center space-y-2">
+                <div className="bg-primary-foreground/10 p-3 rounded-full">
+                  <Briefcase className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-accent">Ex-cartorário</p>
+                  <p className="text-sm text-primary-foreground/80">conhecimento prático</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
