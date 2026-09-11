@@ -13,11 +13,11 @@ export const HeroSection = () => {
               <span className="text-accent">segurança</span> e{" "}
               <span className="text-accent">eficiência</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90 leading-relaxed font-medium">
+            <p className="text-2xl lg:text-3xl text-primary-foreground/90 leading-relaxed font-semibold">
               Seu imóvel está irregular?<br />
               Primeiro precisamos descobrir exatamente por quê.
             </p>
-            <p className="text-base text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto">
               Problemas que posso ajudar a solucionar: imóvel sem matrícula, transcrição antiga, imóvel sem escritura, contrato de gaveta, proprietário que consta no registro já faleceu, imóvel recebido por herança, construção não averbada, divergência de área, necessidade de retificação, usucapião, adjudicação compulsória, exigência do Registro de Imóveis, problemas na cadeia dominial, necessidade de averbações, desmembramento/unificação.
             </p>
           </div>
@@ -49,10 +49,10 @@ export const HeroSection = () => {
                 Conheça Nossos Serviços
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="min-w-[200px] bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
+            <Button variant="outline" size="lg" className="min-w-[260px] bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" asChild>
               <a href="https://www.instagram.com/adv.marcelomasagao/" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-5 w-5" />
-                Instagram
+                Veja mais vídeos sobre cartórios, imóveis e inventários
               </a>
             </Button>
           </div>
