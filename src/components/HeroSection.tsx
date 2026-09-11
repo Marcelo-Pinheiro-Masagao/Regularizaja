@@ -13,10 +13,12 @@ export const HeroSection = () => {
               <span className="text-accent">segurança</span> e{" "}
               <span className="text-accent">eficiência</span>
             </h1>
-            <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              <strong>Equipe especializada</strong> em regularização de imóveis, resolução 
-              de problemas de matrícula, leilões judiciais, atos societários, e assessoria 
-              completa para seus projetos imobiliários e empresariais.
+            <p className="text-xl text-primary-foreground/90 leading-relaxed font-medium">
+              Seu imóvel está irregular?<br />
+              Primeiro precisamos descobrir exatamente por quê.
+            </p>
+            <p className="text-base text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto">
+              Problemas que posso ajudar a solucionar: imóvel sem matrícula, transcrição antiga, imóvel sem escritura, contrato de gaveta, proprietário que consta no registro já faleceu, imóvel recebido por herança, construção não averbada, divergência de área, necessidade de retificação, usucapião, adjudicação compulsória, exigência do Registro de Imóveis, problemas na cadeia dominial, necessidade de averbações, desmembramento/unificação.
             </p>
           </div>
 
